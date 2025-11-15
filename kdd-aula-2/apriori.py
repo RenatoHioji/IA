@@ -38,7 +38,7 @@ for i, trans in enumerate(transacoes):
     for item in trans:
         df_trans.loc[i, item] = 1
 
-csv_path = "transacoes_mercado.csv"
+csv_path = "regras_mercado.csv"
 df_trans.to_csv(csv_path, index=False)
 print(f"✔️ Arquivo CSV salvo com sucesso: {csv_path}")
 
@@ -57,8 +57,9 @@ print(frequent_itemsets)
 
 # Regras de associação
 regras = association_rules(frequent_itemsets, metric="confidence", min_threshold=0.7)
+melhor_regra = regras.loc[regras['lift'].idxmax()]
 
-print("\n📌 Regras de associação (com suporte, confiança e lift):\n")
+
 if not regras.empty:
     for _, row in regras.iterrows():
         print(f"Regra: {set(row['antecedents'])} -> {set(row['consequents'])}")
@@ -67,3 +68,6 @@ if not regras.empty:
         print(f" - Lift: {row['lift']}\n")
 else:
     print("⚠️ Nenhuma regra encontrada com os parâmetros definidos.")
+
+print("\n📌 Regras de associação (com suporte, confiança e lift):\n")
+print(f"Melhor regra {melhor_regra}")
