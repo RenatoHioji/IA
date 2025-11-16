@@ -1,0 +1,47 @@
+cliente,produto
+A,Leite
+A,Pão Francês
+A,Manteiga
+A,Banana
+
+B,Leite
+B,Café
+B,Queijo Mussarela
+B,Granola
+
+C,Pão Francês
+C,Macarrão
+C,Tomate
+C,Leite
+
+D,Chocolate
+D,Refrigerante
+D,Amendoim
+D,Pão de Forma
+
+E,Manteiga
+E,Leite
+E,Feijão
+E,Arroz
+
+F,Maçã
+F,Banana
+F,Granola
+F,Chá Verde
+
+G,Pão Integral
+G,Barra de Cereal
+G,Iogurte Natural
+
+H,Frango
+H,Arroz
+H,Feijão
+H,Tomate
+
+I,Café
+I,Chocolate
+I,Biscoito
+
+J,Água Mineral
+J,Suco de Laranja
+J,Maçã
